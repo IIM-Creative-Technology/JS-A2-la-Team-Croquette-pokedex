@@ -704,8 +704,8 @@ main{
 }
 
 #receptacle {
-width: 450px;
-height: 350px;
+width: 550px;
+height: 380px;
 z-index: 70;
 position: absolute;
 top: 50%;
@@ -743,9 +743,19 @@ padding: 10px;
 
 .gold{
   border: 2px solid gold;
+  //box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+.gold2{
+  border: 2px solid gold;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 .platinum{
+  border: 3px solid;
+  border-image: 
+    linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
+  //box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+.platinum2{
   border: 3px solid;
   border-image: 
     linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;

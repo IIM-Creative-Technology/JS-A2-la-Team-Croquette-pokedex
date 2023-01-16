@@ -24,6 +24,8 @@ if (pat === null) {
     localStorage.setItem("b2", "0");
     localStorage.setItem("b3", "0");
     localStorage.setItem("b4", "0");
+    localStorage.setItem("b5", "0");
+    localStorage.setItem("b6", "0");
 } else {
     console.log("Good!");
 }
@@ -1315,6 +1317,28 @@ if(teamCynthia === JSON.stringify(["spiritomb", "lucario", "milotic", "garchomp"
     localStorage.setItem('contb1', contb1);
     }
 }
+var teamprimo = localStorage.getItem("team2");
+if(teamprimo === JSON.stringify(["groudon", "kyogre", "rayquaza"])){
+    //console.log(teamprimo);
+    localStorage.setItem('b6', '1');
+    let contb6 = 0;
+    if (localStorage.getItem('contb6') === 0) {
+    alert("You won badge number 6");
+    contb6++;
+    localStorage.setItem('contb6', contb6);
+    }
+}
+var teamdragon = localStorage.getItem("team6");
+if(teamdragon === JSON.stringify(["tyranitar", "charizard", "gyarados", "lugia", "aggron", "milotic"])){
+    console.log(teamdragon);
+    localStorage.setItem('b5', '1');
+    let contb5 = 0;
+    if (localStorage.getItem('contb5') === 0) {
+    alert("You won badge number 5");
+    contb5++;
+    localStorage.setItem('contb5', contb5);
+    }
+}
 
 let b1Value = localStorage.getItem("b1");
 let image = document.querySelector(".b1");
@@ -1341,12 +1365,28 @@ if (b4Value === "1") {
     image4.src = "img/b4.png";
     image4.classList.add("lithg");
 }
+let b5Value = localStorage.getItem("b5");
+let image5 = document.querySelector(".b5");
+if (b5Value === "1") {
+    let image5 = document.querySelector(".b5");
+    image5.src = "img/b5.png";
+    image5.classList.add("lithg");
+}
+let b6Value = localStorage.getItem("b6");
+let image6 = document.querySelector(".b6");
+if (b6Value === "1") {
+    let image6 = document.querySelector(".b6");
+    image6.src = "img/b6.png";
+    image6.classList.add("lithg");
+}
 
 
 var b1color = localStorage.getItem("b1");
 var b2color = localStorage.getItem("b2");
 var b3color = localStorage.getItem("b3");
 var b4color = localStorage.getItem("b4");
+var b5color = localStorage.getItem("b5");
+var b6color = localStorage.getItem("b6");
 var count = 0;
 let etuitcolor = document.querySelector('#receptacle');
 
@@ -1362,6 +1402,12 @@ if (b3color == 1) {
 if (b4color == 1) {
     count++;
 }
+if (b5color == 1) {
+    count++;
+}
+if (b6color == 1) {
+    count++;
+}
 
 if (count == 1) {
 etuitcolor.classList.add("copper");
@@ -1370,7 +1416,11 @@ etuitcolor.classList.add("silver");
 } else if (count == 3) {
 etuitcolor.classList.add("gold");
 } else if (count == 4) {
+etuitcolor.classList.add("gold2");
+} else if (count == 5) {
 etuitcolor.classList.add("platinum");
+}else if (count == 6) {
+etuitcolor.classList.add("platinum2");
 }
 
 
