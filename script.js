@@ -1069,9 +1069,9 @@ if ("team1" in localStorage) {
 document.addEventListener('DOMContentLoaded', function() {
     let save = document.querySelector(".save");
     save.addEventListener("click", function() {
-    //console.log("click");
+    console.log("click");
     if (selectedButton === '1'){
-        //console.log('bliat')
+        console.log('bliat')
         team1 = [];
         let droptargets = document.querySelectorAll("header .droptarget");
         let poke = document.getElementsByClassName("poke");
@@ -1083,7 +1083,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         if(team1.length > 0){
-            //console.log(team1);
+            console.log(team1);
             localStorage.setItem("team1", JSON.stringify(team1));
 
         }else{console.log("non");}
@@ -1294,6 +1294,8 @@ overlayb.addEventListener('click', function() {
     let etuitarea = document.querySelector('.etuitarea');
     if (!etuitarea.classList.contains('ninja')) {
         etuitarea.classList.add('ninja');
+        let couvercle = document.querySelector('.couvercle');
+        couvercle.classList.remove('open');
     }
 });
 if (localStorage.getItem('tondeuze') === '1' && localStorage.getItem('washingmachine') === '1' && localStorage.getItem('frigo') === '1' && localStorage.getItem('ventilo') === '1' && localStorage.getItem('incinerator') === '1') {
@@ -1435,4 +1437,16 @@ help.addEventListener('click', function() {
     go.addEventListener('click', function() {
     tuto.classList.add('ninja');
     });
+});
+
+let couvercle = document.querySelector('.couvercle');
+couvercle.addEventListener('click', function() {
+    if (couvercle.classList.contains('closed')) {
+        couvercle.classList.add('open');
+    }
+});
+
+let receptacle = document.querySelector('#receptacle');
+receptacle.addEventListener('click', function() {
+    couvercle.classList.remove('open');
 });

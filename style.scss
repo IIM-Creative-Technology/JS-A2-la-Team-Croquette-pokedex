@@ -729,6 +729,36 @@ padding: 10px;
   filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
 }
 
+.closed{
+  width: 550px;
+  height: 380px;
+  z-index: 75;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //border-radius: 10px;
+  rotate : x 0deg;
+  border: solid 5px black;
+  background-color: #72e9f154;
+  transition: 2s ease-in-out;
+}
+.open{
+  width: 550px;
+  height: 380px;
+  z-index: 75;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //transform: translateX(-275px) translateY(-80px) translateZ(0px);
+  rotate : x 180deg;
+  //border-radius: 10px;
+  border: solid 5px black;
+  background-color: #56a4aa54;
+  transition: 2s ease-in-out;
+}
+
 .ninja{
   display: none;
 }
@@ -829,3 +859,6 @@ padding: 10px;
 .gess{
   color: #808080 !important;
 } 
+
+
+
